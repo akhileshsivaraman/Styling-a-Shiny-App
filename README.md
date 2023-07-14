@@ -19,6 +19,7 @@ But before we look at how these packages work, we need to build a template app i
 <br>
 
 <hr>
+
 ## Building an app
 ### Data
 For the app, we use the Tidy Tuesday dataset on [Project FeederWatch from Week 2 of 2023](<https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-01-10/readme.md>). In short, the data describe the distribution and abundance of bird species across North America over winter 2020/2021 so with this dataset, we can create a simple dashboard that visualises where a selected species has been observed in North America.
@@ -49,10 +50,11 @@ The server remains the same for all the approaches we explore here so from here 
 <br>
 
 <hr>
+
 ## Base app
 With the UI and server sorted, let's see how the app looks (you can also run the app.R script in the base Shiny folder to see how it works). Using base Shiny, we have a pretty basic app that gets the job done and while it's not ugly, it could certainly look more enticing.
 
-<img align="middle" src="base Shiny/base Shiny 1.png">
+<img align="middle" src="base Shiny/base Shiny 1.png" width="600">
 <img align="middle" src="base Shiny/base Shiny 2.png">
 <img align="middle" src="base Shiny/base Shiny 3.png">
 <img align="middle" src="base Shiny/base Shiny 4.png">
@@ -60,6 +62,7 @@ With the UI and server sorted, let's see how the app looks (you can also run the
 <br>
 
 <hr>
+
 ## Layout
 There are two sides to styling our apps, one is the layout (think the overall structure) and the other is theming (think colour schemes and finer details) I generally think it is easier to start the styling process by focussing on the layout before jumping into theming.
 
@@ -185,6 +188,7 @@ Another `shiny.semantic` feature to be aware of is `semantic_DT()`, which genera
 <br>
 
 <hr>
+
 ## Theming
 Now that we've got the layout side of styling our Shiny apps sorted, we'll explore the theming tools available in the three frameworks.
 
@@ -229,5 +233,6 @@ Although we're not exploring how CSS can be used to style Shiny apps here, the o
 <br>
 
 <hr>
+
 ## Wrapping up
 And, just like that, we've created a Shiny app and explored how it can be themed under three different frameworks! It can be hard to learn Shiny without having some templates that show how everything fits together so, hopefully, this guide has helped you understand how we can style apps and, particularly, if you're still fairly new to Shiny, shown you it's not necessarily as tricky or intimidating as it might seem.
