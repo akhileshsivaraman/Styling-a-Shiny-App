@@ -55,9 +55,9 @@ The server remains the same for all the approaches we explore here so from here 
 With the UI and server sorted, let's see how the app looks (you can also run the app.R script in the base Shiny folder to see how it works). Using base Shiny, we have a pretty basic app that gets the job done and while it's not ugly, it could certainly look more enticing.
 
 <img align="middle" src="base Shiny/base Shiny 1.png" width="600">
-<img align="middle" src="base Shiny/base Shiny 2.png">
-<img align="middle" src="base Shiny/base Shiny 3.png">
-<img align="middle" src="base Shiny/base Shiny 4.png">
+<img align="middle" src="base Shiny/base Shiny 2.png" width="600">
+<img align="middle" src="base Shiny/base Shiny 3.png" width="600">
+<img align="middle" src="base Shiny/base Shiny 4.png" width="600">
 
 <br>
 
@@ -75,10 +75,10 @@ As we'll see with the other frameworks, the structure of a `bslib` app is slight
 
 The `bslib` app itself looks a lot like the base Shiny app but more nicely organised, particularly with respect to the header and the spacing between elements.
 
-<img align="middle" src="bslib/Layout/bslib 1.png">
-<img align="middle" src="bslib/Layout/bslib 2.png>
-<img align="middle" src="bslib/Layout/bslib 3.png">
-<img align="middle" src="bslib/Layout/bslib 4.png">
+<img align="middle" src="bslib/Layout/bslib 1.png" width="600">
+<img align="middle" src="bslib/Layout/bslib 2.png width="600">
+<img align="middle" src="bslib/Layout/bslib 3.png" width="600">
+<img align="middle" src="bslib/Layout/bslib 4.png" width="600">
 <br>
 
 Let's have a look at how the code changes. 
@@ -110,10 +110,10 @@ You may have noticed `fillable = F` wrapped inside `page_navbar()`. This argumen
 
 Although the app we get looks more complete than the base Shiny one, it's boxy and not particularly pretty...
 
-<img align="middle" src="shinydashboard/Layout/shinydashboard 1.png">
-<img align="middle" src="shinydashboard/Layout/shinydashboard 2.png">
-<img align="middle" src="shinydashboard/Layout/shinydashboard 3.png">
-<img align="middle" src="shinydashboard/Layout/shinydashboard 4.png">
+<img align="middle" src="shinydashboard/Layout/shinydashboard 1.png" width="600">
+<img align="middle" src="shinydashboard/Layout/shinydashboard 2.png" width="600">
+<img align="middle" src="shinydashboard/Layout/shinydashboard 3.png" width="600">
+<img align="middle" src="shinydashboard/Layout/shinydashboard 4.png" width="600">
 <br>
 
 #### `dashboardPage()`
@@ -154,10 +154,10 @@ The final approach we'll explore works under a very different framework to `bsli
 
 Under the Semantic framework, we get a very clean looking UI with quite a modern feel but it's little bare looking.
 
-<img align="middle" src="semantic/Layout/semantic 1.png">
-<img align="middle" src="semantic/Layout/semantic 2.png">
-<img align="middle" src="semantic/Layout/semantic 3.png">
-<img align="middle" src="semantic/Layout/semantic 4.png">
+<img align="middle" src="semantic/Layout/semantic 1.png" width="600">
+<img align="middle" src="semantic/Layout/semantic 2.png" width="600">
+<img align="middle" src="semantic/Layout/semantic 3.png" width="600">
+<img align="middle" src="semantic/Layout/semantic 4.png" width="600">
 <br>
 
 #### `fluidPage()` and Elements
@@ -197,10 +197,10 @@ Now that we've got the layout side of styling our Shiny apps sorted, we'll explo
 ### `bslib`
 Theming in `bslib` is extremely straightforward to do. You can create a dashboard with quite a bespoke, professional feel very quickly.
 
-<img align="middle" src="bslib/Theming/bs_theme and thematic_shiny/bs_theme 1.png">
-<img align="middle" src="bslib/Theming/bs_theme and thematic_shiny/bs_theme 2.png">
-<img align="middle" src="bslib/Theming/bs_theme and thematic_shiny/bs_theme 3.png">
-<img align="middle" src="bslib/Theming/bs_theme and thematic_shiny/bs_theme 4.png">
+<img align="middle" src="bslib/Theming/bs_theme and thematic_shiny/bs_theme 1.png" width="600">
+<img align="middle" src="bslib/Theming/bs_theme and thematic_shiny/bs_theme 2.png" width="600">
+<img align="middle" src="bslib/Theming/bs_theme and thematic_shiny/bs_theme 3.png" width="600">
+<img align="middle" src="bslib/Theming/bs_theme and thematic_shiny/bs_theme 4.png" width="600">
 <br>
 
 #### `bs_theme()`
@@ -219,7 +219,7 @@ With a few lines of code, our `bslib` app is almost complete. It's a small detai
 ### `shinydashboard`
 Theming with `shinydashboard` is limited. We really only have one option to play with and that's the `skin` parameter of `dashboardPage()`. It defaults to blue (as we saw above) and only takes a handful of named colours without CSS, it isn't really possible to create something bespoke or aesthetically pleasing.
 
-<img align="middle" src="shinydashboard/Theming/skins.png">
+<img align="middle" src="shinydashboard/Theming/skins.png" width="600">
 
 <br>
 
@@ -228,7 +228,7 @@ Again, theming here is limited. It's very much reliant on using classes, for exa
 
 Although we're not exploring how CSS can be used to style Shiny apps here, the overall appearance of a `shiny.semantic` app, even without colour, is nice and clean.
 
-<img align="middle" src="semantic/Theming/semantic theming.png">
+<img align="middle" src="semantic/Theming/semantic theming.png" width="600">
 
 <br>
 
