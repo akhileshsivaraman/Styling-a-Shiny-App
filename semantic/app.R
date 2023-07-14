@@ -1,4 +1,4 @@
-#---- Tidy Tuesday Feeder Watch Shiny App----
+#---- shiny.semantic ----
 
 #---- load packages ----
 library(shiny)
