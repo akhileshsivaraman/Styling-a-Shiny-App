@@ -1,4 +1,4 @@
-#---- bslib App----
+#---- bslib ----
 
 #---- load packages ----
 library(shiny)
