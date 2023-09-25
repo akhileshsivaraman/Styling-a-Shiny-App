@@ -1,0 +1,98 @@
+// colour scheme
+$bg: #F7F7F7;
+$fg: #1a404f;
+$primary: #561643;
+$secondary: #F4D58D;
+$sidebar_colour: #eff0f1;
+
+
+// general
+body {
+  color: $fg;
+}
+
+h2 {
+  margin-bottom: 0;
+}
+
+.ui.basic.segment {
+  background-color: $bg;
+}
+
+.ui.grid+.grid {
+  margin-top: 0;
+}
+
+
+// heading
+#title_panel {
+  background-color: $fg;
+  color: $bg;
+  padding: 0.5em;
+}
+
+.ui.card {
+  width: auto;
+}
+
+// tab menu
+.ui.secondary.pointing.menu {
+  background-color: $fg; 
+  border-bottom-color: $primary;
+}
+
+.ui.secondary.pointing.menu .active.item, .ui.secondary.pointing.menu .active.item:hover, .ui.secondary.pointing.menu a.item:hover {
+  color: $secondary;
+}
+
+
+.ui.menu {
+  margin: 0;
+  padding: 1rem;
+  background-color: $bg;
+}
+
+.ui.menu .item {
+  color: $bg;
+}
+
+
+
+// sidebar
+.ui.primary.button {
+  background-color: $secondary;
+  color: $fg;
+}
+
+.ui.primary.button:hover {
+  background-color: $secondary;
+  color: $fg;
+}
+
+.ui.form .field>label {
+  color: $fg;
+}
+
+.ui.selection.dropdown {
+  color: $fg;
+}
+
+
+// tables
+.ui.pagination.menu .active.item {
+  color: $secondary;
+  background-color: $primary;
+}
+
+.ui.pagination.menu .item {
+  color: $primary;
+}
+
+.ui.table {
+  color: $fg;
+  background-color: $bg;
+}
+
+.ui.table td {
+  background-color: $bg;
+}
