@@ -312,6 +312,7 @@ It really is as simple as that and very quickly we can get our app looking much 
 ![Sass styling 4](Sass/styling/sass styling 4.png)
 :::
 
+
 ### Finding Selectors
 The tricky part of Sass is knowing which selectors to use, particularly if you are new to styling with CSS/Sass. But, we can find the selectors by right-clicking on an element and inspecting it. For example, if we wanted to change the appearance of the tabs, we just inspect the element and we can now find the classes that apply to the tab elements on the far right:
 
@@ -333,3 +334,10 @@ And, with the inspector, we can even play around with properties of elements to 
 
 #### `titlePanel()`
 `titlePanel()` creates the title of our app and gives it an `h2` class, which means that if you want to change the appearance of the title, you will end up changing all of your h2 headings. To avoid this, you need to wrap the content of `titlePanel()` in `div()` and pass an `id` argument to give the title a unique identifier (line 121).
+
+#### Fonts
+The one change I couldn't work out how to do is change the font. I used methods described in various places to use a Google Font but to no avail. On top of that, I couldn't find an example of a `shiny.semantic` app with Sass calling a different font. If you know how to change the font, do let me know!
+
+
+### Putting it together
+As you can see in our `scss` and `app.R` files, we've added a fair bit of CSS to the app and managed to create something that looks more like the `bslib` app. And we've done this without touching on the features of Sass that really make it shine, like mixins and modules.
