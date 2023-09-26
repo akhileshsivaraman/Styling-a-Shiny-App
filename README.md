@@ -11,7 +11,7 @@ We’ll explore three popular approaches to styling Shiny apps:
 * bslib
 * shinydashboard
 * shiny.semantic
-* Update: `Sass` (I've updated this guide with a new section on Sass right at the end!)
+* Update: Sass (I've updated this guide with a new section on Sass right at the end!)
 
 *Make sure you have these packages installed to follow along and run the apps in the repo. The apps for each framework live in folders named after the framework. It may make it easier to understand what is happening by comparing scripts side-by-side and even doing your own little experiments on the code.*
 
