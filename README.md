@@ -11,6 +11,7 @@ We’ll explore three popular approaches to styling Shiny apps:
 * bslib
 * shinydashboard
 * shiny.semantic
+* Update: `Sass` (I've updated this guide with a new section on Sass right at the end!)
 
 *Make sure you have these packages installed to follow along and run the apps in the repo. The apps for each framework live in folders named after the framework. It may make it easier to understand what is happening by comparing scripts side-by-side and even doing your own little experiments on the code.*
 
@@ -236,3 +237,66 @@ Although we're not exploring how CSS can be used to style Shiny apps here, the o
 
 ## Wrapping up
 And, just like that, we've created a Shiny app and explored how it can be themed under three different frameworks! It can be hard to learn Shiny without having some templates that show how everything fits together so, hopefully, this guide has helped you understand how we can style apps and, particularly, if you're still fairly new to Shiny, shown you it's not necessarily as tricky or intimidating as it might seem.
+
+<br>
+
+<hr>
+
+## Update: Sass
+Once you've gotten to grips with `bslib`, `shinydashboard` and/or `shiny.semantic`, you may want to try your hand at using CSS (even with all the headaches it can bring) to have greater control over how the app looks and feels. Rather than using CSS, we'll actually be using the popular pre-processor Sass, which is ultimately compiled into CSS, but has a few advantages for us with its biggest benefit being that we can simplify our style sheets.
+
+I won't go into too much detail on how Sass works so I highly recommend having a scan over the [basics](<https://sass-lang.com/guide/>) if you aren't familiar with it. This is more of a beginner's guide to getting started with Sass in Shiny.
+
+We'll use the `shiny.semantic` app we created a little earlier because it is ready to be themed and we'll try to make it look more like the `bslib` app.
+
+### Set up
+Before we begin, you'll need to install the `sass` package, which contains functions to compile Sass into CSS and read in our style sheet. Getting our app ready to use Sass is very straightforward:
+
+1. Create an `scss` file (note: there's a difference between `sass` and `scss` files!)
+2. Save it
+3. Process it into CSS for Shiny using (line 96 in the `app.R` file):
+```{r eval=FALSE}
+css <- sass(sass_file("file_name"))
+```
+
+4. Tell our app to use this CSS by placing it in the head of our app (line 119):
+```{r eval=FALSE}
+tags$head(tags$style(css))
+```
+
+
+### Variables
+Taking advantage of Sass' variables feature, we define our colour scheme in lines 1-6 (of the `scss` file). Variables simply have to start with `$` and we can name them anything we like; in this case, I have named them according to the parameters we used in `bslib` so that it helps us map the theme over.
+
+### Styling Elements
+Styling our elements using Sass is pretty straightforward. As with CSS, we declare the selector followed by curly braces and attributes we want to change with values. The difference with Sass is that we can use our declared variables in place of values, for example:
+```{scss eval=FALSE}
+body {
+  color: $fg;
+}
+```
+
+It really is as simple as that and very quickly we can get our app looking much nicer!
+
+<img align="middle" src="Sass/styling/sass styling 1.png" width="600">
+<img align="middle" src="Sass/styling/sass styling 2.png" width="600">
+<img align="middle" src="Sass/styling/sass styling 3.png" width="600">
+<img align="middle" src="Sass/styling/sass styling 4.png" width="600">
+
+### Finding Selectors
+The tricky part of Sass is knowing which selectors to use, particularly if you are new to styling with CSS/Sass. But, we can find the selectors by right-clicking on an element and inspecting it. For example, if we wanted to change the appearance of the tabs, we just inspect the element and we can now find the classes that apply to the tab elements on the far right:
+
+<img align="middle" src="Sass/inspect element/inspect tabs 1.png" width="800">
+
+And, with the inspector, we can even play around with properties of elements to test new looks without having to constantly reload the app:
+
+<img align="middle" src="Sass/inspect element/inspect tabs 2.png" width="800">
+
+### `shiny.semantic`
+`shiny.semantic` works really nicely when you want to style your app with Sass because you can declare classes for many elements and they are straightforward names but there are a few points to note when using it. 
+
+#### `sidebar_layout()`
+`sidebar_layout()` quickly creates a sidebar and a main panel without having to fiddle around with the grid system that powers it but the two panels it creates and the grid housing the panels are given randomly generated ids so we can't use selectors in our `scss` files to style them. Instead, we have to use the `container_style` and `area_styles` arguments of `sidebar_layout()`. Consequently, we need to write the CSS as though it were inline CSS, which you can do within the `app.R` file and assign to a value (as done in lines 99-114). The values are then supplied to `container_style` and `area_styles`.
+
+#### `titlePanel()`
+`titlePanel()` creates the title of our app and gives it an `h2` class, which means that if you want to change the appearance of the title, you will end up changing all of your h2 headings. To avoid this, you need to wrap the content of `titlePanel()` in `div()` and pass an `id` argument to give the title a unique identifier (line 121).
